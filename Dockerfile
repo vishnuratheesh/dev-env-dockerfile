@@ -10,7 +10,7 @@ RUN apt-get upgrade -y
 RUN \
   apt-get update && \
   apt-get upgrade && \
-  apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties nodejs && \
+  apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties nodejs curl && \
   rm -rf /var/lib/apt/lists/*
 
 # Install Yarn.
