@@ -12,7 +12,7 @@ RUN apt-get install -y vim php-curl python python-dev python-pip python-virtuale
 # Install Python3.6
 RUN add-apt-repository ppa:jonathonf/python-3.6
 RUN apt update
-RUN apt install python3.6
+RUN apt-get install python3.6
 # Set Python3.6 as default
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
