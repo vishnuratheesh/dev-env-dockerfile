@@ -16,7 +16,7 @@ RUN curl -sL https://deb.nodesource.com/setup_7.x | bash
 RUN apt-get install -y nodejs
 
 # Install Yarn.
-npm install -g yarnpkg
+RUN npm install -g yarnpkg
 
 # Define working directory.
 RUN mkdir /application
