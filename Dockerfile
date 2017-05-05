@@ -8,12 +8,15 @@ RUN apt-get upgrade -y
 
 # Install latest Python 3 and Node.
 RUN \
-  apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties nodejs curl && \
+  apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties curl && \
   rm -rf /var/lib/apt/lists/*
 
-# Install Yarn (experimental).
-# RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-# RUN apt-get update && apt-get install -y yarn
+# Install nodejs
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash
+RUN apt-get install -y nodejs
+
+# Install Yarn.
+npm install -g yarnpkg
 
 # Define working directory.
 RUN mkdir /application
