@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # Install latest pre-requisite apt-ware.
-RUN apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties curl software-properties-common
+RUN apt-get install -y vim php-curl python python-dev python-pip python-virtualenv python-software-properties curl software-properties-common python3-pip
 
 # Install Python3.6
 RUN add-apt-repository ppa:jonathonf/python-3.6
